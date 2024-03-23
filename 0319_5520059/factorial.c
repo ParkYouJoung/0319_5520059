@@ -22,13 +22,13 @@ int main(void) {                               // 시간 구하기
     double r_rec, r_iter;
     clock_t start_rec, end_rec, start_iter, end_iter;
 
-    start_rec = clock();
-    long long result_rec = factorial_rec(n);
-    end_rec = clock();
+    start_rec = clock();                         // 재귀함수 측정 시작
+    long long result_rec = factorial_rec(n);  
+    end_rec = clock();                          // 재귀함수 측정 종료
 
-    start_iter = clock();
-    long long result_iter = factorial_iter(n);
-    end_iter = clock();
+    start_iter = clock();                          // 반복함수 측정 시작
+    long long result_iter = factorial_iter(n);     
+    end_iter = clock();                             // 반복함수 측정 종료 
 
     r_rec = (double)(end_rec - start_rec) / CLOCKS_PER_SEC;
     r_iter = (double)(end_iter - start_iter) / CLOCKS_PER_SEC;
@@ -42,3 +42,42 @@ int main(void) {                               // 시간 구하기
     return 0;
 }
 
+
+//// 재귀 함수
+//
+//long long factorial_rec(long n);
+//
+//long long main(void) {
+//	long n = 20;
+//	long long total = factorial_rec(n);
+//	printf("rec 결과 : %lld", total);
+//	return 0;
+//}
+//
+//long long factorial_rec(long n) {
+//	
+//	if (n <= 1) return 1;
+//	else return (n * factorial_rec(n - 1));
+//
+//}
+//
+//// 반복 함수
+//
+//long long factorial_iter(long n);
+//
+//long long main_aa(void) {
+//
+//	long long n = 0;
+//	long long total = factorial_iter(20);
+//	printf("iter 결과 : %lld", total);
+//	return 0;
+//
+//}
+//
+//long long factorial_iter(long n) {
+//
+//	long long i, r = 1;
+//	for (i = 1; i <= n; i++)
+//		r = r * i;
+//	return(r);
+//}
