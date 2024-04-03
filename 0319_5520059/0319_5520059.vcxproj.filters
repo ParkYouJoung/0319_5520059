@@ -15,10 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="factorial.c">
+    <ClCompile Include="0319_5520059_factorial.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="power.c">
+    <ClCompile Include="0319_55200590_power.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="0328_5520059_polynomial.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
